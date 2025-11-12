@@ -14,8 +14,3 @@ O projeto foi criado com o objetivo de aplicar conceitos de **SPA (Single Page A
 - **JavaScript (ES6+)** — Lógica de autenticação, CRUD e integração com API.
 - **ViaCEP API** — Consulta automática de endereço pelo CEP.
 - **LocalStorage** — Persistência de dados (usuários e produtos) sem backend.
-
----
-
-## 🧩 Estrutura do Projeto
-
