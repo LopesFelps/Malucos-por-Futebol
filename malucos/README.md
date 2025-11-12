@@ -1,15 +1,21 @@
-# Malucos por futebol
+# 🏆 Malucos por Futebol
 
-Projeto em React (JSX) para a disciplina — loja de futebol com CRUD simulado.
+**Malucos por Futebol** é um projeto de uma loja virtual de produtos esportivos (voltada ao futebol), desenvolvido com **React.js**, **HTML**, **CSS** e **JavaScript puro (sem TypeScript)**.
 
-## Como rodar
-1. Instale dependências:
-   ```bash
-   npm install
-   ```
-2. Rode em modo de desenvolvimento:
-   ```bash
-   npm start
-   ```
+O projeto foi criado com o objetivo de aplicar conceitos de **SPA (Single Page Application)**, **componentização**, **contexto de autenticação**, **persistência local (localStorage)** e integração com uma API pública (ViaCEP).
 
-> Este projeto foi entregue como arquivos JavaScript (JSX). Use Create React App (CRA) ou equivalente para rodar.
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **React.js (JSX)** — Biblioteca principal para criação da interface.
+- **React Router DOM** — Gerenciamento de rotas (navegação SPA).
+- **CSS3** — Estilização customizada com tema escuro e responsivo.
+- **JavaScript (ES6+)** — Lógica de autenticação, CRUD e integração com API.
+- **ViaCEP API** — Consulta automática de endereço pelo CEP.
+- **LocalStorage** — Persistência de dados (usuários e produtos) sem backend.
+
+---
+
+## 🧩 Estrutura do Projeto
+
