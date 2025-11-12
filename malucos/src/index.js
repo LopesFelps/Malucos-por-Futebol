@@ -1,5 +1,3 @@
-// index.js
-// Arquivo de entrada da aplicação - manter como .js conforme solicitado.
 // Aqui inicializamos o React e o BrowserRouter, montando o App no elemento #root.
 
 import React from 'react';

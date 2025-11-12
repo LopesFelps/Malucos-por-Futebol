@@ -1,7 +1,3 @@
-// AuthContext.jsx
-// Contexto de autenticação simples que usa localStorage para persistir sessão.
-// Comentários em português explicam onde os dados são guardados e como usar o contexto.
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
@@ -12,7 +8,6 @@ export function useAuth(){
 }
 
 // Provider que envolve a aplicação e fornece funções de login/logout e o objeto user.
-// Observação importante: neste projeto a autenticação é SIMULADA (para apresentação).
 // Os dados do usuário são salvos no localStorage com a chave 'mpf_user'.
 export function AuthProvider({ children }){
   const [user, setUser] = useState(null);
@@ -31,7 +26,6 @@ export function AuthProvider({ children }){
     }
   }, []);
 
-  // Função de login simulado: salva o objeto do usuário no localStorage e no estado.
   // Exemplo de userObj: { name: 'João', email: 'joao@ex.com' }
   function login(userObj){
     localStorage.setItem('mpf_user', JSON.stringify(userObj)); // Persistência local

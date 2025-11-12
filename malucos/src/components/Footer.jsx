@@ -1,7 +1,3 @@
-// Footer.jsx
-// Rodapé simples com ano atual.
-// Comentário explicativo para apresentação.
-
 import React from 'react';
 
 export default function Footer(){

@@ -1,7 +1,3 @@
-// Login.jsx
-// Tela de login com validações simples.
-// Explica onde os dados são salvos (localStorage via AuthContext).
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.jsx';

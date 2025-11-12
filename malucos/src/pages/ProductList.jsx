@@ -1,8 +1,3 @@
-// ProductList.jsx
-// Lista de produtos com CRUD simulado via localStorage.
-// Os produtos de exemplo apontam para imagens locais em /public/images/.
-// Para usar suas fotos, coloque os arquivos em public/images/ com os nomes indicados.
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -17,28 +12,26 @@ export default function ProductList(){
     if(raw){
       try{ setProducts(JSON.parse(raw)); }catch(e){ setProducts([]); }
     }else{
-      // Produtos de exemplo já configurados para usar imagens locais:
-      // public/images/camisa.jpg, bola.jpg, chuteira.jpg, meiao.jpg
       const sample = [
         {
           id:'p1', name:'Camisa Seleção', category:'Camisas', price:199.9, qty:10,
           desc:'Camisa oficial modelo 2024',
-          img: process.env.PUBLIC_URL + '/images/camisa.jpg' // imagem local
+          img: process.env.PUBLIC_URL + ''
         },
         {
           id:'p2', name:'Bola Oficial', category:'Bolas', price:129.0, qty:25,
           desc:'Bola para treino e jogo',
-          img: process.env.PUBLIC_URL + '/images/bola.jpg'
+          img: process.env.PUBLIC_URL + ''
         },
         {
           id:'p3', name:'Chuteira Speed', category:'Chuteiras', price:359.9, qty:5,
           desc:'Leve e confortável',
-          img: process.env.PUBLIC_URL + '/images/chuteira.jpg'
+          img: process.env.PUBLIC_URL + ''
         },
         {
           id:'p4', name:'Meião Oficial', category:'Acessórios', price:39.9, qty:50,
           desc:'Meião com elastano',
-          img: process.env.PUBLIC_URL + '/images/meiao.jpg'
+          img: process.env.PUBLIC_URL + ''
         }
       ];
       localStorage.setItem('mpf_products', JSON.stringify(sample));
@@ -74,7 +67,6 @@ export default function ProductList(){
         {products.map(p => (
           <div className="product-card card" key={p.id}>
             <div className="product-thumb">
-              {/* Se imagem existir, mostramos via <img>; caso contrário, nome da categoria */}
               { p.img ? <img src={p.img} alt={p.name} /> : <div style={{padding:12, color:'var(--muted)'}}>{p.category}</div> }
             </div>
 

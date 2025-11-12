@@ -1,7 +1,3 @@
-// ProductForm.jsx
-// Formulário para criar/editar produto.
-// Permite informar a URL da imagem ou, se desejar, usar imagens locais com process.env.PUBLIC_URL.
-
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -10,7 +6,6 @@ export default function ProductForm(){
   const { id } = useParams();
 
   // Estado do formulário; inclui 'img' que é o caminho/URL da imagem.
-  // Para usar imagens locais, informe: process.env.PUBLIC_URL + '/images/nome.jpg'
   const [form, setForm] = useState({ name:'', category:'Camisas', price:0, qty:1, desc:'', img:'' });
   const [error, setError] = useState(null);
 
@@ -31,7 +26,7 @@ export default function ProductForm(){
     setForm(prev => ({...prev, [name]: name === 'price' || name === 'qty' ? Number(value) : value }));
   }
 
-  // Ao salvar, atualizamos localStorage (simulando backend)
+  // Ao salvar, atualizamos localStorage
   function handleSubmit(e){
     e.preventDefault();
     setError(null);
@@ -99,7 +94,7 @@ export default function ProductForm(){
                 placeholder="Ex: process.env.PUBLIC_URL + '/images/camisa.jpg' ou https://..."
               />
               <small style={{color:'var(--muted)'}}>
-                Dica: para usar imagens locais (na pasta public/images), escreva: process.env.PUBLIC_URL + '/images/nome.jpg'
+                Dica: para usar imagens locais (na pasta public/images), escreva: '/images/nome.jpg'
               </small>
             </div>
           </div>

@@ -1,7 +1,3 @@
-// Header.jsx
-// Cabeçalho com marca e navegação.
-// Mostra links diferentes dependendo se o usuário está logado.
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.jsx';
@@ -21,13 +17,11 @@ export default function Header(){
         </div>
       </div>
 
-      {/* Navegação: se user existe, mostra links internos; caso contrário, mostra Login/Registrar */}
       <nav className="nav-links">
         { user ? (
           <>
             <Link to="/app/lista" className={loc.pathname.startsWith('/app/lista') ? 'active' : ''}>Produtos</Link>
             <Link to="/app/novo" className={loc.pathname === '/app/novo' ? 'active' : ''}>Adicionar</Link>
-            {/* Botão de logout chama a função logout do contexto */}
             <button className="btn btn-ghost" onClick={logout} style={{marginLeft:12}}>Sair</button>
           </>
         ) : (

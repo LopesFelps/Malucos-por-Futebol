@@ -1,11 +1,6 @@
-// App.js
-// Mantido como .js conforme solicitado.
-// Responsável por montar o layout principal (Header/Footer) e as rotas da aplicação.
-
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-// Importamos componentes/páginas em arquivos .jsx
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Login from './pages/Login.jsx';

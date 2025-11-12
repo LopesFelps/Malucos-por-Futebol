@@ -1,7 +1,3 @@
-// Register.jsx
-// Tela de registro com opção de buscar endereço via ViaCEP.
-// Comentários explicam quando usamos API externa e onde os dados do usuário são salvos.
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.jsx';
@@ -23,7 +19,7 @@ export default function Register(){
     setForm(prev => ({...prev, [name]: value}));
   }
 
-  // Busca de CEP usando ViaCEP (API pública brasileira).
+  // Busca de CEP usando ViaCEP (API pública).
   // Observação: este fetch exige conexão com a internet quando usado.
   async function buscaCep(){
     const cep = form.cep.replace(/\D/g,'');
