@@ -91,7 +91,7 @@ export default function ProductForm(){
                 className="input"
                 value={form.img}
                 onChange={handleChange}
-                placeholder="Ex: process.env.PUBLIC_URL + '/images/camisa.jpg' ou https://..."
+                placeholder="Ex: '/images/camisa.jpg' ou https://..."
               />
               <small style={{color:'var(--muted)'}}>
                 Dica: para usar imagens locais (na pasta public/images), escreva: '/images/nome.jpg'
